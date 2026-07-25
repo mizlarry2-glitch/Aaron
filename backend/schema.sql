@@ -12,6 +12,8 @@ CREATE TABLE smtp_accounts (
   reply_to_email text NOT NULL,
   daily_send_limit integer NOT NULL CHECK (daily_send_limit >= 1),
   sent_today integer NOT NULL DEFAULT 0,
+  hourly_send_limit integer,
+  sent_this_hour integer NOT NULL DEFAULT 0,
   health_score integer NOT NULL DEFAULT 100 CHECK (health_score BETWEEN 0 AND 100),
   status text NOT NULL DEFAULT 'active' CHECK (status IN ('active','paused','failing','archived')),
   created_at timestamptz NOT NULL DEFAULT now()
