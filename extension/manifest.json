@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Cold Email Command Center",
+  "version": "1.0",
+  "description": "Quickly access the Cold Email Command Center dashboard.",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Command Center Dashboard"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
